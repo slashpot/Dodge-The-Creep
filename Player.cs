@@ -88,6 +88,3 @@ public partial class Player : Area2D
 		GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
 	}
 }
-
-
-
