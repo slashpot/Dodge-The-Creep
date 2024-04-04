@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c72r5w5frays6"]
+[gd_scene load_steps=5 format=3 uid="uid://c72r5w5frays6"]
 
 [ext_resource type="Script" path="res://Hud.cs" id="1_f8kdw"]
 [ext_resource type="FontFile" uid="uid://cpe8yuu0irt6l" path="res://fonts/Xolonium-Regular.ttf" id="1_j1t44"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_45180"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_ilhsq"]
+events = [SubResource("InputEventAction_45180")]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_f8kdw")
@@ -49,9 +55,10 @@ offset_right = 100.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
+shortcut = SubResource("Shortcut_ilhsq")
 text = "Start"
 
-[node name="MessageTimer" type="Timer" parent="."]
+[node name="MessageTimer" type="Timer" parent="." groups=["mobs"]]
 wait_time = 2.0
 one_shot = true
 
