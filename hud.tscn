@@ -58,7 +58,7 @@ grow_vertical = 0
 shortcut = SubResource("Shortcut_ilhsq")
 text = "Start"
 
-[node name="MessageTimer" type="Timer" parent="." groups=["mobs"]]
+[node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
